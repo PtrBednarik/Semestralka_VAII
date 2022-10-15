@@ -65,10 +65,6 @@ header a:hover {
     /*font-family: 'Alex Brush';*/
 }
 
-/*.main-container {*/
-/*    background-color: #a2c3d9;*/
-/*}*/
-
 /*-------------------------------ABOUT_PAGE--------------------------------*/
 .about-text {
     /*padding-top: 50px;*/
@@ -120,7 +116,6 @@ header a:hover {
     justify-content: center;
     align-items: center;
 }
-
 /*-------------------------------FOOTER--------------------------------------*/
 .footer{
     /*position: relative;*/
@@ -135,7 +130,6 @@ header a:hover {
 .footer p {
     margin: 0;
 }
-
 .footer-text{
     color: antiquewhite;
     font-size: 17px;

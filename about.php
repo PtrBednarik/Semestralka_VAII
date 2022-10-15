@@ -1,8 +1,10 @@
 <?php include 'Partials/header.php'; ?>
-<?php include 'Partials/footer.php'; ?>
 
-<body>
-    <h1 class="title">O nas</h1>
+
+    <div class="title-container">
+        <h3>O nás</h3>
+    </div>
+<!--    <h1 class="title">O nas</h1>-->
     <p class="about-text">
         Lorem Ipsum is simply dummy text of the printing
         and typesetting industry. Lorem Ipsum has been the
@@ -19,4 +21,7 @@
 
     <img class="img-fluid" src="Assets/CSS/Images/zbor_about.jpg"
          alt="Zbor spolocna fotka">
-</body>
+
+    <?php include 'Partials/footer.php'; ?>
+
+

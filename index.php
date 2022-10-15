@@ -1,11 +1,9 @@
 <?php include 'Partials/header.php'; ?>
+
+
+<div class="title-container">
+    <h3>Nebeský šramot</h3>
+</div>
 <?php include 'Partials/footer.php'; ?>
 
 
-<body>
-    <section class = "main-container">
-        <div>
-            <h1 class="main-title">Nebeský šramot</h1>
-        </div>
-    </section>
-</body>

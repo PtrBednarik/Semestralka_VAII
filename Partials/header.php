@@ -4,12 +4,14 @@
 <head>
     <title>Jardo is disgusting</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Assets/CSS/style.css">
-    <script src="Assets/JS/script.js"> </script>
 <!------------------------------------------BOOTSTRAP------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
+<!------------------------------------------BOOTSTRAP------------------------------------->
+
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <script src="Assets/JS/script.js"> </script>
 <!----------------------------------FONTS-------------------------------------------------->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +33,8 @@
             <li><a href="history.php">Historia</a></li>
             <li><a href="gallery.php">Galeria</a></li>
             <li><a href="contact.php">Kontakt</a></li>
+            <li><a href="news.php">Aktuality</a></li>
+            <li><a class="login_title" href="login.php">Prihlásenie</a></li>
         </ul>
     </nav>
 </header>

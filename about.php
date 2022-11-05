@@ -22,6 +22,6 @@
     <img class="img-fluid" src="Assets/CSS/Images/zbor_about.jpg"
          alt="Zbor spolocna fotka">
 
-    <?php include 'Partials/footer.php'; ?>
+<?php include 'Partials/footer.php'; ?>
 
 

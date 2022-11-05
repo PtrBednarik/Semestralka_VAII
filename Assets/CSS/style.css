@@ -37,7 +37,9 @@ header a:hover {
     padding-top: 50px;
     margin: 5%;
 }
-
+.login_title {
+    color: #eb6d3f;
+}
 
 /*-------------------------------MAIN_PAGE--------------------------------*/
 /*Nadpis*/
@@ -116,6 +118,40 @@ header a:hover {
     justify-content: center;
     align-items: center;
 }
+/*-------------------------------LOGIN--------------------------------------*/
+.login_section {
+    position: absolute;
+    background-color: grey;
+    width: 17rem;
+    height: 17rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login_section input {
+    margin: 0.3rem auto;
+    padding: 0.3rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px white solid;
+    box-shadow: none;
+}
+.login_button {
+    padding: 0.5rem;
+    margin: 1.1rem auto;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px white solid;
+    text-transform: uppercase;
+}
+.login_button:hover {
+    background-color: #eb6d3f;
+    border: 1px #eb6d3f solid;
+}
+
 /*-------------------------------FOOTER--------------------------------------*/
 .footer{
     /*position: relative;*/

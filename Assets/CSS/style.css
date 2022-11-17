@@ -40,7 +40,9 @@ header a:hover {
 .login_title {
     color: #eb6d3f;
 }
-
+.logout-title {
+    margin-left: 210px;
+}
 /*-------------------------------MAIN_PAGE--------------------------------*/
 /*Nadpis*/
 /*.main-title {*/

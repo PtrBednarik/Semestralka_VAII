@@ -1,12 +1,5 @@
 <?php include 'inc/config.php'; ?>
 
-<?php
-//    session_start();
-//    $_SESSION;
-//
-//    $user_data = check_login($con);
-//?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +21,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
 </head>
 
 <body>
@@ -37,28 +29,30 @@
     <nav>
         <ul>
             <li><a href="index.php">Domov</a></li>
-            <li><a href="about.php">O nas</a></li>
-            <li><a href="history.php">Historia</a></li>
-            <li><a href="gallery.php">Galeria</a></li>
-            <li><a href="contact.php">Kontakt</a></li>
             <li><a href="news.php">Aktuality</a></li>
+            <li><a href="gallery.php">Galéria</a></li>
+            <li><a href="history.php">História</a></li>
+            <li><a href="about.php">O nás</a></li>
+            <li><a href="contact.php">Kontakt</a></li>
 
-
-
+            <!---------Co sa zobrazi po prihlaseni, SEM :------------->
             <?php
             session_start();
 
             if (isset($_SESSION['login_user'])) {
-                ?> <li><a href="info.php">Informacie</a></li> <?php
+                ?>
+            <li><a href="info.php">Informácie</a></li>
+            <?php
             }
-
             if (isset($_SESSION['login_user'])) {
-                ?> <li><a class="login_title" href="logout.php">Odlhlasit</a></li> <?php
+                ?>
+            <li><a class="login_title" href="logout.php">Odhlásiť</a></li>
+            <?php
             } else {
-               ?> <li><a class="login_title" href="login.php">Prihlásenie</a></li> <?php
+               ?>
+            <li><a class="login_title" href="login.php">Prihlásenie</a></li>
+            <?php
             }
-
-
             session_write_close();
             ?>
         </ul>

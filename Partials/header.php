@@ -12,7 +12,7 @@
 <!------------------------------------------BOOTSTRAP------------------------------------->
 
     <link rel="stylesheet" href="Assets/CSS/style.css">
-    <script src="Assets/JS/script.js"> </script>
+    <script src="../Assets/JS/script.js"> </script>
 <!----------------------------------FONTS-------------------------------------------------->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,5 +1,10 @@
 <?php
 
+function redirect($page) {
+    header("location: $page");
+    die();
+}
+
 //function check_login($con) {
 //
 //    if(isset($_SESSION['user_id'])) {

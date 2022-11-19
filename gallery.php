@@ -44,6 +44,51 @@
             <li>
                 <a href="http://localhost/Semestralka/gallery.php?id=2013">2013</a>
             </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2012">2012</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2011">2011</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2010">2010</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2009">2009</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2008">2008</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2007">2007</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2006">2006</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2005">2005</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2004">2004</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2003">2003</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2002">2002</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2001">2001</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=2000">2000</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=1999">1999</a>
+            </li>
+            <li>
+                <a href="http://localhost/Semestralka/gallery.php?id=1998">1998</a>
+            </li>
         </ul>
     </div>
 </div>

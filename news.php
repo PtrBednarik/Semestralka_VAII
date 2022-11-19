@@ -1,10 +1,6 @@
 <?php include 'Partials/header.php'; ?>
 <?php include 'logic.php'; ?>
 
-<?php   //$sql = "SELECT * FROM article";
-        //$query = mysqli_query($db, $sql);
-?>
-
 <div class="title-container">
     <h3>Aktuality</h3>
 </div>
@@ -15,40 +11,59 @@
     <?php if(isset($_REQUEST['info'])){ ?>
         <?php if($_REQUEST['info'] == "added"){?>
             <div class="alert alert-success" role="alert">
-                Post has been added successfully
+                Príspevok bol úspešne pridaný
             </div>
         <?php } else if ($_REQUEST['info'] == "updated") {?>
             <div class="alert alert-success" role="alert">
-                Post has been updated successfully
+                Príspevok bol úspešne upravený
             </div>
         <?php } else if ($_REQUEST['info'] == "deleted") {?>
             <div class="alert alert-danger" role="alert">
-                Post has been deleted successfully
+                Príspevok bol úspešne zmazaný
             </div>
         <?php } ?>
     <?php } ?>
 
     <!-- Create a new Post button -->
     <div class="text-center">
-        <a href="create.php" class="btn btn-outline-dark">+ Create a new post</a>
+        <a href="create.php" class="btn create-button btn-primary">+ Nový príspevok</a>
     </div>
 
-    <!-- Display posts from database -->
-    <div class="row">
-        <?php foreach($query as $q){ ?>
-            <div class="col-12 col-lg-4 d-flex justify-content-center">
-                <div class="card text-white bg-dark mt-5" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $q['title'];?></h5>
-                        <p class="card-text"><?php echo substr($q['content'], 0, 50);?>...</p>
-                        <a href="view.php?id=<?php echo $q['id']?>" class="btn btn-light">Read More <span class="text-danger">&rarr;</span></a>
-                    </div>
+    <!--------Blog section---------------->
+    <section id="blog">
+        <!--blog-container--->
+        <div class="blog-container">
+<!--            <!--box-1------->
+<!--            <div class="blog-box">-->
+<!--                <!--img------->
+<!--                <div class="blog-img">-->
+<!--                    <img src="Assets/CSS/Images/tulen1.jpg" alt="Blog">-->
+<!--                </div>-->
+<!--                <!--text------->
+<!--                <div class="blog-text">-->
+<!--                    <span>18 July 2022 / Web design</span>-->
+<!--                    <a href="#" class="blog-title"> Tulene sa mnozia</a>-->
+<!--                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+<!--                    <a href="#">Read more</a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <?php foreach($query as $q){ ?>
+            <!--box-1------->
+            <div class="blog-box">
+                <!--text------->
+                <div class="blog-text">
+                    <a class="blog-title"><?php echo $q['title'];?></a>
+                    <p><?php echo substr($q['content'], 0, 50);?>...</p>
+                    <a href="view.php?id=<?php echo $q['id']?>">Viac</a>
                 </div>
             </div>
-        <?php }?>
-    </div>
-
+            <?php }?>
+        </div>
+    </section>
 </div>
+
+
 <?php include 'Partials/footer.php'; ?>
 
 

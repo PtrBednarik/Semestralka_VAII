@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($db,$_POST['username']);
     $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-    $sql = "SELECT id FROM user WHERE username = '$myusername' and password = '$mypassword'";
+    $sql = "SELECT id FROM users WHERE username = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
     if ($row == null) {
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("location: index.php");
     }else {
-        $error = "Nesprávne prihlasovanie meno alebo heslo!";
+        $error = "Nesprávne prihlasovacie meno alebo heslo!";
     }
 }
 ?>

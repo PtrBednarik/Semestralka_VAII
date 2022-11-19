@@ -14,6 +14,7 @@
 <div class="container mt-5 create-container" >
     <div class="row">
         <div class="col-lg-8 mx-auto bg-white p-4 shadow">
+            <a class="back-link" href="news.php">&larrhk; Späť</a>
             <h1 class="h3 text-center">Pridať príspevok</h1>
             <form method="GET">
                 <div class="form-group">

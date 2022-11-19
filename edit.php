@@ -23,7 +23,7 @@
 <div class="container mt-5 create-container" >
     <div class="row">
         <div class="col-lg-8 mx-auto bg-white p-4 shadow">
-            <a class="back-link" href="news.php">&larrhk; Back</a>
+            <a class="back-link" href="news.php">&larrhk; Späť</a>
             <h1 class="h3 text-center">Upraviť príspevok</h1>
             <?php foreach($query as $q) {?>
             <form method="POST">

@@ -28,7 +28,7 @@
 <section class="section-view">
     <?php foreach($query as $q) {?>
     <div class="container mt-5">
-        <a class="back-link" href="news.php">&larrhk; Back</a>
+        <a class="back-link" href="news.php">&larrhk; Späť</a>
         <h1><?php echo $q['title'];?></h1>
         <div>
             <p><?php echo $q['content'];?></p>

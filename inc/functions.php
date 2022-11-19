@@ -5,6 +5,10 @@ function redirect($page) {
     die();
 }
 
+function replace($find, $replace, $where) {
+
+}
+
 //function check_login($con) {
 //
 //    if(isset($_SESSION['user_id'])) {

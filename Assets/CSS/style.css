@@ -159,10 +159,6 @@ header a:hover {
     border: 1px #eb6d3f solid;
     background-color: #eb6d3f;
 }
-/*.create-button:hover {*/
-/*    background-color: #256D85;*/
-/*    !*border: 1px #eb6d3f solid;*!*/
-/*}*/
 /*-------------------------------VIEW_PAGE--------------------------------*/
 .section-view {
     background-color: #fafafa;
@@ -217,6 +213,17 @@ header a:hover {
         padding: 20px;
     }
 }
+/*-------------------------------CONTACT_PAGE--------------------------------*/
+.contact-div {
+    padding: 2rem;
+    /*text-align: center;*/
+}
+#map {
+    height: 600px;
+    width: 100%;
+    margin: 2%;
+}
+
 /*-------------------------------HISTORY_PAGE--------------------------------*/
 
 
@@ -265,7 +272,7 @@ header a:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .login_section input {
-    margin: 0.3rem auto;
+    margin: 0.7rem auto;
     padding: 0.3rem;
     outline: none;
     border-radius: 5px;
@@ -284,7 +291,15 @@ header a:hover {
     background-color: #eb6d3f;
     border: 1px #eb6d3f solid;
 }
-
+#error {
+    color: red;
+}
+.error-span {
+    display: block;
+    margin-left: 20px;
+    color: red;
+    font-style: italic;
+}
 /*-------------------------------FOOTER--------------------------------------*/
 .footer{
     /*position: relative;*/

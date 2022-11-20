@@ -13,7 +13,12 @@
 
     <link rel="stylesheet" href="Assets/CSS/style.css">
     <script src="Assets/JS/script.js"> </script>
-<!----------------------------------FONTS-------------------------------------------------->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2_5soo06q4-R3o7pHsU5tKTewtPcuEII&callback=initMap&v=weekly"
+        defer
+    ></script>
+
+    <!----------------------------------FONTS-------------------------------------------------->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +63,7 @@
             ?>
         </ul>
     </nav>
+            <!--Porgress bar Script-->
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>

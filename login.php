@@ -4,7 +4,6 @@
 session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form
 
     $myusername = mysqli_real_escape_string($db,$_POST['username']);
     $mypassword = mysqli_real_escape_string($db,$_POST['password']);
@@ -12,22 +11,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT id FROM users WHERE username = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    if ($row == null) {
-        redirect('login.php');
-    }
+//    if ($row == null) {
+//        redirect('login.php');
+//    }
     $active = $row['active'];
 
     $count = mysqli_num_rows($result);
 
-    // If result matched $myusername and $mypassword, table row must be 1 row
-
+    // Ak dostanem $myusername aj $mypassword, riadok z tabulky musi byt 1
     if($count == 1) {
         $_SESSION["myusername"];
         $_SESSION['login_user'] = $myusername;
 
         header("location: index.php");
-    }else {
-        $error = "Nesprávne prihlasovacie meno alebo heslo!";
+    }else if ($row == null) {
+        redirect('login.php');
+        echo "Nesprávne prihlasovacie meno alebo heslo!";
+        //$error = "Nesprávne prihlasovacie meno alebo heslo!";
     }
 }
 ?>
@@ -42,7 +42,5 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
     </form>
 </div>
-
-
 
 <?php include 'Partials/footer.php'; ?>

@@ -5,9 +5,9 @@
     $query = mysqli_query($db, $sql);
 
     //CREATE
-    if (isset($_REQUEST['new_post'])) { //TU
-        $title = $_REQUEST['title'];    //TU
-        $content = $_REQUEST['content']; //TU
+    if (isset($_REQUEST['new_post'])) {
+        $title = $_REQUEST['title'];
+        $content = $_REQUEST['content'];
 
         $title = str_replace("\\", "\\\\", $title, $num);
         $title = str_replace("'", "\'", $title, $num);
@@ -32,8 +32,8 @@
     //UPDATE
     if (isset($_REQUEST['update'])) {
         $id = $_REQUEST['id'];
-        $title = $_REQUEST['title']; //TU
-        $content = $_REQUEST['content']; //TU
+        $title = $_REQUEST['title'];
+        $content = $_REQUEST['content'];
 
         $title = str_replace("\\", "\\\\", $title, $num);
         $title = str_replace("'", "\'", $title, $num);

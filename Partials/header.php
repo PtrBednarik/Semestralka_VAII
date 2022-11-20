@@ -63,7 +63,7 @@
             ?>
         </ul>
     </nav>
-            <!--Porgress bar Script-->
+            <!--Progress bar Script-->
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>

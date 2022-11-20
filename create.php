@@ -1,15 +1,6 @@
 <?php include 'Partials/header.php'; ?>
 <?php include 'logic.php'; ?>
 
-<!--<div class="container mt-5">-->
-<!--    <form method="GET">-->
-<!--        <input type="text" name="title" placeholder="Nadpis príspevku" class="form-control-->
-<!--         bg-dark text-white my-3 text-center">-->
-<!--        <textarea name="content" class="form-control bg-dark text-white my-3"></textarea>-->
-<!--        <button name="new_post" class="btn btn-dark">Pridať</button>-->
-<!--    </form>-->
-<!--</div>-->
-
 
 <div class="container mt-5 create-container" >
     <div class="row">
@@ -19,7 +10,7 @@
             <form method="GET">
                 <div class="form-group">
                     <label for="title">Nadpis</label>
-                    <input type="text" name="title" class="form-control">
+                    <input type="text" name="title" maxlength="255" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="description">Obsah</label>

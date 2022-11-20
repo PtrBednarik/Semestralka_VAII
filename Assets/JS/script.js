@@ -2,9 +2,9 @@
 window.onscroll = function() {progressBar()};
 
 function progressBar() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height =   document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;  //kolko som uz odscrolloval
+    var height =   document.documentElement.scrollHeight - document.documentElement.clientHeight; //vyska elementu - vyska CSS,hranic,margin,..
+    var scrolled = (winScroll / height) * 100; //odscroll / celkova vyska * 100
     document.getElementById("myBar").style.width   = scrolled + "%";
 }
 

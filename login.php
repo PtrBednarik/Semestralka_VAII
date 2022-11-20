@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: index.php");
     }else if ($row == null) {
         redirect('login.php');
-        echo "Nesprávne prihlasovacie meno alebo heslo!";
+        //echo "Nesprávne prihlasovacie meno alebo heslo!";
         //$error = "Nesprávne prihlasovacie meno alebo heslo!";
     }
 }

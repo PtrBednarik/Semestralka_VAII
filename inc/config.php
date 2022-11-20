@@ -1,17 +1,22 @@
 
 <?php
-include 'inc/functions.php';
+include 'functions.php';
 
-$ServerName = "localhost";
-$UserName = "root";
-$Password = "";
+const DB_HOST = "localhost";
+const DB_USER = "root";
+const DB_PASS = "";
+const DB_NAME = "sramotdb";
 
-//Server connection
-$Connection = new mysqli($ServerName, $UserName, $Password);
-//Only check connection
-if ($Connection -> connect_error){
-    die("Zlyhanie pripojenia" . $Connection -> connect_error);
+$db = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+if (!$db) {
+    die("Failed to connect!");
 }
+
+
+
+
+
 
 
 

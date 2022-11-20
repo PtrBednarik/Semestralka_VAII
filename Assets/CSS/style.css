@@ -37,8 +37,24 @@ header a:hover {
     padding-top: 50px;
     margin: 5%;
 }
+.login_title {
+    color: #eb6d3f;
+}
+.logout-title {
+    margin-left: 210px;
+}
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #256D85;
+    margin-top: -30px;
+}
 
-
+.progress-bar {
+    height: 8px;
+    background: #eb6d3f;
+    width: 0%;
+}
 /*-------------------------------MAIN_PAGE--------------------------------*/
 /*Nadpis*/
 /*.main-title {*/
@@ -64,7 +80,110 @@ header a:hover {
     color: white;
     /*font-family: 'Alex Brush';*/
 }
+/*-------------------------------NEWS_PAGE--------------------------------*/
+.btn {
+    font-size: 30px;
+    border-radius: 10px;
+    height: 60px;
+    width:50%;
+}
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.blog-box {
+    width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #ececec;
+    margin: 20px;
+}
+.blog-img {
+    width: 100%;
+    height: auto;
+}
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.blog-text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.blog-text span {
+    color: #eb6d3f;
+    font-size: 0.9rem;
+}
+.blog-text .blog-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #256D85;
+}
+.blog-text .blog-text:hover {
+    color: green;
+    transition: all ease 0.3s;
+}
+.blog-text p{
+    color: grey;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a{
+    color: black;
+}
+.blog-text a:hover {
+    color: #eb6d3f;
+    transition: all ease 0.3s;
+}
+/*-------------------------------CREATE_PAGE--------------------------------*/
+.create-container {
+    padding: 3vw;
+}
+.create-div {
+    background-color: #fafafa;
+}
 
+.create-button {
+    margin: 20px;
+    box-shadow: none;
+    border: 1px #eb6d3f solid;
+    background-color: #eb6d3f;
+}
+/*-------------------------------VIEW_PAGE--------------------------------*/
+.section-view {
+    background-color: #fafafa;
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /*text-align: justify;*/
+}
+.back-link {
+    text-decoration: none;
+    color: #eb6d3f;
+}
+.view-buttons {
+    display: flex;
+}
+.view-buttons form button {
+    margin-left: 1rem;
+}
+.view-buttons a,
+.view-buttons form button {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    width: 7rem;
+}
 /*-------------------------------ABOUT_PAGE--------------------------------*/
 .about-text {
     /*padding-top: 50px;*/
@@ -75,18 +194,41 @@ header a:hover {
     margin: 5%;
     padding: 5%;
 }
+@media (max-width: 1250px) {
+    .blog-box {
+        width: 300px;
+    }
+}
+@media (max-width: 1100px) {
+    .blog-box {
+        width: 70%;
+    }
+}
+@media (max-width: 550px) {
+    .blog-box {
+        margin: 20px 10px;
+        width: 100%;
+    }
+    #blog{
+        padding: 20px;
+    }
+}
+/*-------------------------------CONTACT_PAGE--------------------------------*/
+.contact-div {
+    padding: 2rem;
+    /*text-align: center;*/
+}
+#map {
+    height: 600px;
+    width: 100%;
+    margin: 2%;
+}
+
 /*-------------------------------HISTORY_PAGE--------------------------------*/
 
 
 /*-------------------------------GALLERY_PAGE--------------------------------*/
-.btn {
-    padding: 30px 20px;
-    font-size: 50px;
-    border-radius: 10px;
-    height: 100px;
-    width:50%;    //Specify your width here
 
-}
 .gallery-menu {
     background-color: coral;
     text-align: center;
@@ -115,6 +257,48 @@ header a:hover {
     /*text-align: center;*/
     justify-content: center;
     align-items: center;
+}
+/*-------------------------------LOGIN--------------------------------------*/
+.login_section {
+    position: absolute;
+    background-color: grey;
+    width: 17rem;
+    height: 17rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login_section input {
+    margin: 0.7rem auto;
+    padding: 0.3rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px white solid;
+    box-shadow: none;
+}
+.login_button {
+    padding: 0.5rem;
+    margin: 1.1rem auto;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px white solid;
+    text-transform: uppercase;
+}
+.login_button:hover {
+    background-color: #eb6d3f;
+    border: 1px #eb6d3f solid;
+}
+#error {
+    color: red;
+}
+.error-span {
+    display: block;
+    margin-left: 20px;
+    color: red;
+    font-style: italic;
 }
 /*-------------------------------FOOTER--------------------------------------*/
 .footer{

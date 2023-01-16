@@ -1,4 +1,4 @@
-<?php include 'Partials/header.php'; ?>
+<?php include '../../Partials/header.php'; ?>
 
 
     <div class="title-container">
@@ -19,9 +19,9 @@
         Aldus PageMaker including versions of Lorem Ipsum.
     </p>
 
-    <img class="img-fluid" src="Assets/CSS/Images/zbor_about.jpg"
+    <img class="img-fluid" src="../../Assets/CSS/Images/zbor_about.jpg"
          alt="Zbor spolocna fotka">
 
-<?php include 'Partials/footer.php'; ?>
+<?php include '../../Partials/footer.php'; ?>
 
 

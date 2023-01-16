@@ -1,4 +1,4 @@
-<?php include 'Partials/header.php'; ?>
+<?php include '../../Partials/header.php'; ?>
 
 
 
@@ -15,6 +15,7 @@
     <div>
         <ul>
             <li>
+<!--                zmenit ID na YEAR-->
                 <a href="http://localhost/Semestralka/gallery.php?id=2022">2022</a>
             </li>
             <li>
@@ -86,9 +87,6 @@
             <li>
                 <a href="http://localhost/Semestralka/gallery.php?id=1999">1999</a>
             </li>
-            <li>
-                <a href="http://localhost/Semestralka/gallery.php?id=1998">1998</a>
-            </li>
         </ul>
     </div>
 </div>
@@ -106,7 +104,7 @@
 //    }
 //        echo intval($_GET['id']);
 //    ?>
-<?php include 'Partials/footer.php'; ?>
+<?php include '../../Partials/footer.php'; ?>
 
 
 

@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    font-size: 25px;
+    font-size: 24px;
     color: #000;
     transition-duration: 0.3s;
 }
@@ -14,14 +14,29 @@ header {
     top : 0;
     z-index: 1000;  /*Priorita*/
 }
-header ul li{
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    background-color: #256D85;
+    padding: 20px;
+    flex-grow: 1;
+}
+.menu li{
     display: inline-flex;
     padding: 3px;
+    margin: 3px;
 }
-header ul {
-    background-color: #256D85;
-    padding: 20px
-}
+/*header ul li{*/
+/*    display: inline-flex;*/
+/*    padding: 3px;*/
+/*}*/
+/*header ul {*/
+/*    background-color: #256D85;*/
+/*    padding: 20px*/
+/*}*/
 header a {
     color: white;
     text-decoration: none;
@@ -30,7 +45,95 @@ header a {
 header a:hover {
     color: #a2c3d9;
 }
-/*Titulok na kazdej stranke*/
+.logo {
+    /*display: block;*/
+    left: 25px;
+    display: flex;
+    position: fixed;
+}
+.logo-img {
+    max-inline-size: 40px;
+    display: block;
+    width: 100%;
+}
+.navigation-Mob {
+    display: none;
+}
+.hamburger-icon {
+    display: none;
+}
+
+/*MOBILNE MENU*/
+@media screen and (max-width: 800px) {
+    .header {
+        padding: 50px 20px;
+        height: 50px;
+    }
+    .menu {
+        height: 65px;
+    }
+    /*toto sa meni z block na none*/
+    .navigation-Mob {
+        display: block;
+    }
+    /*display none zobrazuje/schovava bocne menu*/
+    .menu-Mob {
+        display: none;
+        text-decoration: none;
+        justify-content: center;
+        /*flex-direction: column;*/
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #256d85;
+        width: 150px;
+        height: 14.5rem;
+        padding-top: 60px;
+        padding-right: 30px;
+        padding-left: 30px;
+        list-style-type: none;
+    }
+
+    .menu li {
+        width: 100%;
+        /*Tu miznu moznosti velkeho screenu*/
+        display: none;
+        list-style-type: none;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+    /*Check-box*/
+    .toggle-menu {
+        /*display: none;*/
+        display: flex !important;
+        height: 50px;
+        width: 23px;
+        right: 23px;
+        position: absolute;
+        z-index: 2;
+        /*opacity: 0;*/
+    }
+
+    .hamburger-icon {
+        display: flex !important;
+        height: 30px;
+        right: 20px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .iksko-icon {
+        position: absolute;
+        top: 20px;
+        height: 30px;
+        right: 20px;
+        cursor: pointer;
+    }
+}
+/*--------------------Titulok na kazdej stranke--------------------*/
 .title {
     text-align: center;
     font-size: 70px;
@@ -80,6 +183,26 @@ header a:hover {
     color: white;
     /*font-family: 'Alex Brush';*/
 }
+.main-title {
+    text-align: center;
+    /*font-size: 60px;*/
+    font-size: 18vh;
+    padding-top: 45vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    color: white;
+    /*color: #eb6d3f;*/
+    /*font-family: 'Alex Brush';*/
+    font-family: 'Moon Dance', cursive;
+}
+.home-bckgrnd {
+    height: 100vh !important;
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url("Images/Janov_klavir.JPG");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+    /*filter: brightness(50%) ;*/
+}
 /*-------------------------------NEWS_PAGE--------------------------------*/
 .btn {
     font-size: 30px;
@@ -95,10 +218,11 @@ header a:hover {
     flex-wrap: wrap;
 }
 .blog-box {
-    width: 350px;
+    width: 70%;
     background-color: #ffffff;
     border: 1px solid #ececec;
     margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .blog-img {
     width: 100%;
@@ -263,7 +387,7 @@ header a:hover {
     position: absolute;
     background-color: grey;
     width: 17rem;
-    height: 17rem;
+    height: 18rem;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

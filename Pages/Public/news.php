@@ -1,5 +1,5 @@
-<?php include 'Partials/header.php'; ?>
-<?php include 'logic.php'; ?>
+<?php include '../../Partials/header.php'; ?>
+<?php include '../Actions/logic.php'; ?>
 
 <div class="title-container">
     <h3>Aktuality</h3>
@@ -23,11 +23,18 @@
             </div>
         <?php } ?>
     <?php } ?>
-
+    <?php session_start();
+    if (isset($_SESSION['login_admin'])) {
+    ?>
     <!-- Create a new Post button -->
     <div class="text-center">
-        <a href="create.php" class="btn create-button btn-primary">+ Nový príspevok</a>
+        <a href="../Actions/create.php" class="btn create-button btn-primary">+ Nový príspevok</a>
     </div>
+
+    <?php
+    }
+    session_write_close();
+    ?>
 
     <!--------Blog section---------------->
     <section id="blog">
@@ -53,9 +60,9 @@
             <div class="blog-box">
                 <!--text------->
                 <div class="blog-text">
-                    <a class="blog-title"><?php echo $q['title'];?></a>
-                    <p><?php echo substr($q['content'], 0, 50);?>...</p>
-                    <a href="view.php?id=<?php echo $q['id']?>">Viac</a>
+                    <a class="blog-title" href="../Actions/view.php?tag=news&id=<?php echo $q['id']; ?>"><?php echo $q['title'];?></a>
+                    <p><?php echo substr($q['content'], 0, 200);?>...</p>
+                    <a href="../Actions/view.php?tag=news&id=<?php echo $q['id']; ?>">Viac</a>
                 </div>
             </div>
             <?php }?>
@@ -64,7 +71,7 @@
 </div>
 
 
-<?php include 'Partials/footer.php'; ?>
+<?php include '../../Partials/footer.php'; ?>
 
 
 

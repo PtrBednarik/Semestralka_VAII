@@ -1,4 +1,4 @@
-<?php include 'Partials/header.php'; ?>
+<?php include '../../Partials/header.php'; ?>
 
 
 
@@ -19,6 +19,6 @@
     Aldus PageMaker including versions of Lorem Ipsum.
 </p>
 <!--    <h1 class="title">Historia</h1>-->
-<?php include 'Partials/footer.php'; ?>
+<?php include '../../Partials/footer.php'; ?>
 
 

@@ -6,11 +6,27 @@ if (isset($_SESSION['login_admin']) || isset($_SESSION['login_user'])) {
 $sql = "SELECT * FROM adminposts";
 $query = mysqli_query($db, $sql);
 ?>
-
-
     <div class="title-container">
         <h3>Informácie</h3>
     </div>
+<div class="container mt-5">
+
+    <!-- Display any info -->
+    <?php if(isset($_REQUEST['info'])){ ?>
+        <?php if($_REQUEST['info'] == "added"){?>
+            <div class="alert alert-success" role="alert">
+                Príspevok bol úspešne pridaný
+            </div>
+        <?php } else if ($_REQUEST['info'] == "updated") {?>
+            <div class="alert alert-success" role="alert">
+                Príspevok bol úspešne upravený
+            </div>
+        <?php } else if ($_REQUEST['info'] == "deleted") {?>
+            <div class="alert alert-danger" role="alert">
+                Príspevok bol úspešne zmazaný
+            </div>
+        <?php } ?>
+    <?php } ?>
 <?php
     if (isset($_SESSION['login_admin'])) {
     ?>
@@ -37,10 +53,9 @@ $query = mysqli_query($db, $sql);
             <?php }?>
         </div>
     </section>
-<?php include '../../Partials/footer.php';
 
+</div>
+<?php include '../../Partials/footer.php';
 }
 session_write_close();
-
-
 ?>

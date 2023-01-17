@@ -8,26 +8,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($db,$_POST['username']);
     $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-//    $adminUsername = mysqli_real_escape_string($db,$_POST['adminUsername']);
-//    $adminPassword = mysqli_real_escape_string($db,$_POST['adminPassword']);
-
     //Pre beznych prihlasenych
     $sql = "SELECT id FROM users WHERE username = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
-//    //Pre prihlasenych admin
-//    $sqlAdmin = "SELECT id FROM admins WHERE adminUsername = '$adminUsername' and adminPassword = '$adminPassword'";
-//    $resultAdmin = mysqli_query($db,$sqlAdmin);
-//    $rowAdmin = mysqli_fetch_array($resultAdmin,MYSQLI_ASSOC);
-//    if ($row == null) {
-//        redirect('login.php');
-//    }
     $active = $row['active'];
-//    $activeAdmin = $rowAdmin['activeAdmin'];
 
     $count = mysqli_num_rows($result);
-//    $countAdmins = mysqli_num_rows($resultAdmin);
 
     // Ak dostanem $myusername aj $mypassword, riadok z tabulky musi byt 1
     if($count == 1) {
@@ -36,10 +24,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("location: index.php");
     }
-//    } elseif ($countAdmins == 1) {
-//        $_SESSION["adminUsername"];
-//        $_SESSION['login_admin'] = $adminUsername;
-//    }
 
     else if ($row == null) {
         redirect('login.php');

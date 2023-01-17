@@ -1,6 +1,5 @@
 <?php include '../../Partials/header.php'; ?>
 
-
 <?php
 session_start();
 

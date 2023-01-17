@@ -12,7 +12,6 @@
         <?php
         session_start();
         if (isset($_SESSION['login_admin'])) {
-
         ?>
         <div class="view-buttons">
             <a href="edit.php?tag=<?php echo $_GET['tag'] ?>&id=<?php echo $q['id'];?>" class="btn btn-light btn-sm">Upraviť</a>
@@ -22,16 +21,13 @@
                 <button class="btn btn-danger btn-sm ml-2" name="delete">Zmazať</button>
             </form>
         </div>
-
     </div>
     <?php
         }
-
     else if (isset($_SESSION['login_user'])) {
-        echo "Prihlás sa ako admin, ak chceš upravovať články.";
+//        echo "Prihlás sa ako admin, ak chceš upravovať články.";
     }
     }
-
             ?>
 </section>
 

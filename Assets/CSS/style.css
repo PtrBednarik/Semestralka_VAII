@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    font-size: 25px;
+    font-size: 23px;
     color: #000;
     transition-duration: 0.3s;
 }
@@ -14,14 +14,22 @@ header {
     top : 0;
     z-index: 1000;  /*Priorita*/
 }
-header ul li{
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    background-color: #256D85;
+    padding: 20px;
+    flex-grow: 1;
+}
+.menu li{
     display: inline-flex;
     padding: 3px;
+    margin: 3px;
 }
-header ul {
-    background-color: #256D85;
-    padding: 20px
-}
+
 header a {
     color: white;
     text-decoration: none;
@@ -30,7 +38,107 @@ header a {
 header a:hover {
     color: #a2c3d9;
 }
-/*Titulok na kazdej stranke*/
+.logo {
+    /*display: block;*/
+    left: 25px;
+    display: flex;
+    position: fixed;
+}
+.logo-img {
+    max-inline-size: 40px;
+    display: block;
+    width: 100%;
+}
+.navigation-Mob {
+    display: none;
+}
+.hamburger-icon {
+    display: none;
+}
+
+/*MOBILNE MENU*/
+@media screen and (max-width: 800px) {
+    .header {
+        padding: 50px 20px;
+        height: 50px;
+    }
+    .menu {
+        height: 65px;
+    }
+    /*toto sa meni z block na none*/
+    .navigation-Mob {
+        display: block;
+    }
+    /*display none zobrazuje/schovava bocne menu*/
+    .menu-Mob {
+        display: none;
+        text-decoration: none;
+        justify-content: center;
+        /*flex-direction: column;*/
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #256d85;
+        width: 150px;
+        height: 14.5rem;
+        padding-top: 60px;
+        padding-right: 30px;
+        padding-left: 30px;
+        list-style-type: none;
+    }
+
+    .menu li {
+        width: 100%;
+        /*Tu miznu moznosti velkeho screenu*/
+        display: none;
+        list-style-type: none;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+    /*Check-box*/
+    .toggle-menu {
+        /*display: none;*/
+        display: flex !important;
+        height: 50px;
+        width: 23px;
+        right: 23px;
+        position: absolute;
+        z-index: 2;
+        /*opacity: 0;*/
+    }
+
+    .hamburger-icon {
+        display: flex !important;
+        height: 30px;
+        right: 20px;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .iksko-icon {
+        position: absolute;
+        top: 20px;
+        height: 30px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .column-gallery {
+        width: 100% !important;
+    }
+
+    .blog-box {
+        width: 90% !important;
+    }
+
+    .main-title {
+        font-size: 5rem !important;
+    }
+}
+/*--------------------Titulok na kazdej stranke--------------------*/
 .title {
     text-align: center;
     font-size: 70px;
@@ -56,13 +164,6 @@ header a:hover {
     width: 0%;
 }
 /*-------------------------------MAIN_PAGE--------------------------------*/
-/*Nadpis*/
-/*.main-title {*/
-/*    text-align: center;*/
-/*    font-size: 30px;*/
-/*    padding-top: 70px;*/
-/*    !*font-family: 'Alex Brush';*!*/
-/*}*/
 .title-container {
     height: 40vh !important;
     background: rgba(26,26,26,0.60) url("Images/forest_bcgrnd.jpg");
@@ -80,6 +181,24 @@ header a:hover {
     color: white;
     /*font-family: 'Alex Brush';*/
 }
+.main-title {
+    text-align: center;
+    /*font-size: 60px;*/
+    font-size: 18vh;
+    padding-top: 45vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    color: white;
+    font-family: 'Moon Dance', cursive;
+}
+.home-bckgrnd {
+    height: 100vh !important;
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.60)), url("Images/Janov_klavir.JPG");
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-attachment: fixed;
+    /*filter: brightness(50%) ;*/
+}
 /*-------------------------------NEWS_PAGE--------------------------------*/
 .btn {
     font-size: 30px;
@@ -95,10 +214,11 @@ header a:hover {
     flex-wrap: wrap;
 }
 .blog-box {
-    width: 350px;
+    width: 70%;
     background-color: #ffffff;
     border: 1px solid #ececec;
     margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .blog-img {
     width: 100%;
@@ -185,33 +305,43 @@ header a:hover {
     width: 7rem;
 }
 /*-------------------------------ABOUT_PAGE--------------------------------*/
+.about-div {
+    display: flex;
+    margin: 2%;
+    padding: 5px 4px;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /*outline: solid #256D85;*/
+}
+.about-text-h3 {
+    text-align: center;
+}
 .about-text {
     /*padding-top: 50px;*/
     margin: 5%;
 }
 .fotka-zbor {
+    position: center;
     max-width: 100%;
     margin: 5%;
     padding: 5%;
 }
-@media (max-width: 1250px) {
-    .blog-box {
-        width: 300px;
-    }
-}
 @media (max-width: 1100px) {
-    .blog-box {
-        width: 70%;
+    /*.blog-box {*/
+    /*    width: 300px;*/
+    /*}*/
+    .about-div {
+        display: block;
     }
-}
-@media (max-width: 550px) {
-    .blog-box {
-        margin: 20px 10px;
+    .about-container {
         width: 100%;
-    }
-    #blog{
-        padding: 20px;
-    }
+}
 }
 /*-------------------------------CONTACT_PAGE--------------------------------*/
 .contact-div {
@@ -226,7 +356,148 @@ header a:hover {
 
 /*-------------------------------HISTORY_PAGE--------------------------------*/
 
+/*the vertical ruler*/
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #256D85;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container okolo obsahu*/
+.history-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+    border-radius: 10px;
+    /*outline: solid #256D85;*/
+}
+
+/* orazove kruzky*/
+.history-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12px;
+    background-color: white;
+    border: 4px solid #eb6d3f;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Tie vlavo */
+.left {
+    left: 0;
+}
+
+/* Tie vpravo */
+.right {
+    left: 50.3%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 25px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+/* content */
+.content {
+    padding: 20px 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+.podnadpis {
+    color: #eb6d3f;
+}
+@media screen and (max-width: 600px) {
+    /* timelime nalavo */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Containeri v plnej sirke */
+    .history-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .history-container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left::after, .right::after {
+        left: 17px;
+    }
+
+    .right {
+        left: 0.5%;
+    }
+}
+#toTopBtn {
+    opacity: 0.6;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#toTopBtn:hover {
+    background-color: #555;
+}
 /*-------------------------------GALLERY_PAGE--------------------------------*/
 
 .gallery-menu {
@@ -252,18 +523,45 @@ header a:hover {
 .gallery-menu ul li a:hover {
     background-color: #eb6d3f;
 }
+/*-------------------------*/
+.row-gallery {
+    content: "";
+    display: table;
+    clear: both;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.column-gallery {
+    float: left;
+    width: 25%;
+    padding: 15px;
+}
+.column-gallery img {
+    opacity: 0.8;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5%;
+}
+
+.column-gallery img:hover {
+    opacity: 1;
+}
+
+
 .row {
     display: flex;
     /*text-align: center;*/
     justify-content: center;
     align-items: center;
 }
+
+
 /*-------------------------------LOGIN--------------------------------------*/
 .login_section {
     position: absolute;
     background-color: grey;
     width: 17rem;
-    height: 17rem;
+    height: 22rem;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -300,6 +598,70 @@ header a:hover {
     color: red;
     font-style: italic;
 }
+/*-------------------------------REGISTRATION--------------------------------------*/
+.registration-container {
+    margin-top: 7%;
+    padding: 8%;
+    padding-left: 15%;
+    padding-right: 15%;
+    align-items: center;
+}
+.registration-container h1{
+    text-align: center;
+}
+
+.input-reg[type=text], .input-reg[type=password], .input-reg[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    margin: 5px;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 15px;
+}
+
+.input-reg[type=text]:focus, .input-reg[type=password]:focus, .input-reg[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+    border-radius: 15px;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.regbtn {
+    background-color: #f1f1f1;
+    position: relative;
+    color: black;
+    padding: 16px 20px;
+    //margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    opacity: 0.9;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+.regbtn:hover {
+    background-color: #eb6d3f;
+    opacity: 1;
+}
+
+a {
+    color: #eb6d3f;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+.showPasswd {
+    font-size: 15px;
+}
 /*-------------------------------FOOTER--------------------------------------*/
 .footer{
     /*position: relative;*/
@@ -319,4 +681,12 @@ header a:hover {
 }
 .author {
     font-size: 10px;
+}
+.showP {
+    width: 100%;
+    margin: 5px;
+    text-align: right;
+}
+.showPasswd input {
+    margin-left: 7px;
 }

@@ -25,7 +25,6 @@
     <?php
         }
     else if (isset($_SESSION['login_user'])) {
-//        echo "Prihlás sa ako admin, ak chceš upravovať články.";
     }
     }
             ?>

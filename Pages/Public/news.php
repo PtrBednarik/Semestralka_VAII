@@ -26,7 +26,6 @@
     <?php session_start();
     if (isset($_SESSION['login_admin'])) {
     ?>
-    <!-- Create a new Post button -->
     <div class="text-center">
         <a href="../Actions/create.php" class="btn create-button btn-primary">+ Nový príspevok</a>
     </div>
@@ -39,7 +38,7 @@
     <!--------Blog section---------------->
     <section id="blog">
         <!--blog-container--->
-        <div class="blog-container">
+        <div id="note" class="blog-container">
             <?php foreach($query as $q){ ?>
             <div class="blog-box">
                 <div class="blog-text">

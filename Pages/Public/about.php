@@ -4,7 +4,6 @@
     <div class="title-container">
         <h3>O nás</h3>
     </div>
-<!--    <h1 class="title">O nas</h1>-->
 <section>
     <div class="about-div">
         <div class="about-container">

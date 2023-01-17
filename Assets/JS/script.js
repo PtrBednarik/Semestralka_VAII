@@ -7,8 +7,7 @@ function progressBar() {
     var scrolled = (winScroll / height) * 100; //odscroll / celkova vyska * 100
     document.getElementById("myBar").style.width   = scrolled + "%";
 }
-
-// Google Maps
+// Google Maps - Internet
 function initMap() {
     const location = { lat: 49.199111653925975, lng: 18.73809138145087 };
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -38,4 +37,37 @@ function hideMobMenu() {
         x.style.display = 'block'
     }
 }
+const topButton = document.getElementById("myBtn");
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function passwordUnhidden() {
+    const x = document.getElementById("loginPasswd");
+
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+function passwordUnhidden2() {
+    const y = document.getElementById("regPSWDInput");
+
+    if (y.type === "password") {
+        y.type = "text";
+    } else {
+        y.type = "password";
+    }
+}

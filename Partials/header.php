@@ -5,18 +5,10 @@
 <head>
     <title>Nebeský šramot</title>
     <meta charset="UTF-8">
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
 <!------------------------------------------BOOTSTRAP------------------------------------->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-    <link rel="stylesheet" href="../../Assets/CSS/style.css">
-    <script src="../../Assets/JS/script.js"> </script>
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2_5soo06q4-R3o7pHsU5tKTewtPcuEII&callback=initMap&v=weekly"
-        defer
-    ></script>
 
     <!----------------------------------FONTS-------------------------------------------------->
 
@@ -27,6 +19,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../../Assets/CSS/style.css">
+    <script src="../../Assets/JS/script.js"> </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2_5soo06q4-R3o7pHsU5tKTewtPcuEII&callback=initMap&v=weekly"
+        defer
+    ></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
      maximum-scale=1.0, user-scalable=no">
@@ -44,7 +44,7 @@
                 </a>
             </div>
             <li><a href="../Public/index.php">Domov</a></li>
-            <li><a href="../Public/news.php">Aktuality</a></li>
+            <li><a href="../Public/news.php" onclick="tmp()">Aktuality</a></li>
             <li><a href="../Public/gallery.php">Galéria</a></li>
             <li><a href="../Public/history.php">História</a></li>
             <li><a href="../Public/about.php">O nás</a></li>
@@ -73,7 +73,6 @@
             <img class="hamburger-icon" src="../../Assets/CSS/Images/hamburger.png" alt="Hamburger_menu" onclick="showMobMenu()">
         </ul>
     </nav>
-
 
             <!--Progress bar Script-->
     <div class="progress-container">
@@ -110,15 +109,8 @@
                 <li><a class="login_title" href="../Public/login.php">Prihlásenie</a></li>
                 <?php
             }
-
-            if (isset($_SESSION['login_user'])) {
-                ?>
-                <li><p>Vitaj, uživateľ <?php echo $_SESSION['login_user'] ?></p></li>
-                <?php
-            }
-
             session_write_close();
-            error_reporting(0)
+            error_reporting(0);
             ?>
         </ul>
     </nav>

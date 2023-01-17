@@ -96,7 +96,6 @@
         if ($query->num_rows > 0) {
             while ($row = $query->fetch_assoc()) {
                 $imagePathURL = '../../Zbor_fotky/'.$year.'/'.$row["filepath"];
-//                $absoluteImageURL = 'C:/Programs/XAMPP/htdocs/Semestralka/Zbor_fotky/'.$year.'/'.$row["filepath"];
                 ?>
                 <div class="column-gallery">
                 <a href="<?php echo $imagePathURL; ?>">
@@ -106,27 +105,8 @@
       <?php }
         } ?>
     </div>
-
 </section>
-<div>
 
-
-
-</div>
-<!--    --><?php
-//        echo $PathName;
-//        if (intval($_GET['id']) == '2022') {
-//            ?>
-<!--            <img src="Assets/CSS/Images/tulen1.jpg">;-->
-<!--            --><?php
-//        }
-//        if (intval($_GET['id']) == '2021') {
-//            ?>
-<!--            <img src="Assets/CSS/Images/tulen2.jpg">;-->
-<!--            --><?php
-//    }
-//        echo intval($_GET['id']);
-//    ?>
 <?php include '../../Partials/footer.php'; ?>
 
 

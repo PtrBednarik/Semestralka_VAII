@@ -24,7 +24,6 @@
         <div id="map"></div>
     </div>
 </section>
-<!--    <h1 class="title">Kontakt</h1>-->
 <?php include '../../Partials/footer.php'; ?>
 
 

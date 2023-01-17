@@ -20,8 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($db,$username);
     $password = mysqli_real_escape_string($db,$password);
 
-//    $password = PASSWORD_HASH($password, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO users (name, surname, email, username, password) VALUES 
+    $sql = "INSERT INTO admins (name, surname, email, username, password) VALUES 
             ('$name','$surname','$email','$username','$password')";
     $result = mysqli_query($db,$sql);
 
@@ -31,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form action="" method="post">
     <div class="registration-container">
-        <h1>Registrácia</h1>
+        <h1>Registrácia-Admin</h1>
         <hr>
 
         <label for="name"><b>Meno</b></label>
@@ -41,16 +40,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <input class="input-reg" type="text" placeholder="Priezvisko..." name="surname" id="surname" required>
 
         <label for="email"><b>Email</b></label>
-        <input class="input-reg" type="email" placeholder="Email..." name="email" id="email" required>
+        <input class="input-reg" type="text" placeholder="Email..." name="email" id="email" required>
 
         <label for="username"><b>Prihlasovacie meno</b></label>
         <input class="input-reg" type="text" placeholder="Prihlasovacie meno..." name="username" id="username" required>
 
         <label for="password"><b>Heslo</b></label>
-        <input class="input-reg passwdInput" type="password" id="regPSWDInput" placeholder="Heslo..." name="password" required>
-        <div class="showP">
-            <input class="showPasswd" type="checkbox" onclick="passwordUnhidden2()">Ukáž heslo!
-        </div>
+        <input class="input-reg" type="password" placeholder="Heslo..." name="password" id="password" required>
+
         <button type="submit" class="regbtn">REGISTROVAŤ</button>
     </div>
 

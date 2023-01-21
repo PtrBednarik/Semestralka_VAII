@@ -69,7 +69,7 @@
         </div>
     </div>
 </div>
-<button onclick="topFunction()" id="toTopBtn" title="Go to top">Hore</button>
+<button onclick="topFunction()" id="toTopBtn">Hore</button>
 
 <?php include '../../Partials/footer.php'; ?>
 

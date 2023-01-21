@@ -3,8 +3,8 @@
     $sql = "SELECT * FROM articles";
     $query = mysqli_query($db, $sql);
 
-    $sqlPosts = "SELECT * FROM adminPosts";
-    $queryPosts = mysqli_query($db, $sqlPosts);
+//    $sqlPosts = "SELECT * FROM adminPosts";
+//    $queryPosts = mysqli_query($db, $sqlPosts);
 
     //CREATE
     if (isset($_REQUEST['new_post_news'])) {

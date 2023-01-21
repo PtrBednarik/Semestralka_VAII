@@ -345,8 +345,12 @@ header a:hover {
 }
 /*-------------------------------CONTACT_PAGE--------------------------------*/
 .contact-div {
+    margin: 10px;
     padding: 2rem;
-    /*text-align: center;*/
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.contact-div h5{
+    color: #eb6d3f;
 }
 #map {
     height: 600px;
@@ -411,37 +415,11 @@ header a:hover {
     left: 50.3%;
 }
 
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 25px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
-}
-
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-}
-
 .right::after {
     left: -16px;
 }
 
-/* content */
+/* obsah */
 .content {
     padding: 20px 20px;
     background-color: white;
@@ -457,7 +435,7 @@ header a:hover {
         left: 31px;
     }
 
-    /* Containeri v plnej sirke */
+    /* Containery v plnej sirke */
     .history-container {
         width: 100%;
         padding-left: 70px;
@@ -466,9 +444,7 @@ header a:hover {
 
     .history-container::before {
         left: 60px;
-        border: medium solid white;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
     }
 
     .left::after, .right::after {
@@ -484,11 +460,11 @@ header a:hover {
     position: fixed;
     bottom: 20px;
     right: 30px;
+    background-color: #eb6d3f;
     z-index: 99;
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: coral;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -496,7 +472,7 @@ header a:hover {
 }
 
 #toTopBtn:hover {
-    background-color: #555;
+    background-color: #256D85;
 }
 /*-------------------------------GALLERY_PAGE--------------------------------*/
 

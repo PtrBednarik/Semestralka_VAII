@@ -35,8 +35,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <form action="" method="post">
         <section class="login_section">
             <h2 style="margin-top: 10%">Prihlásenie</h2>
-            <input name="username" type="text" placeholder="Username">
-            <input name="password" type="password" placeholder="Heslo" id="loginPasswd" class="passwdInput"><br>
+            <input name="username" type="text" placeholder="Username" required>
+            <input name="password" type="password" placeholder="Heslo" id="loginPasswd" class="passwdInput" required><br>
             <div class="showP" style="text-align: center !important;">
                 <input class="showPasswd" type="checkbox"  onclick="passwordUnhidden()">Ukáž heslo!
             </div>

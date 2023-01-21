@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = mysqli_real_escape_string($db,$_POST['username']);
     $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
-    //Pre beznych prihlasenych
+    //Pre prihlasenych adminov
     $sql = "SELECT id FROM admins WHERE username = '$myusername' and password = '$mypassword'";
     $result = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -40,8 +40,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <form action="" method="post">
         <section class="login_section">
             <h2 style="margin-top: 10%">Prihlásenie-ADM</h2>
-            <input name="username" type="text" placeholder="Username">
-            <input name="password" type="password" placeholder="Heslo"><br>
+            <input name="username" type="text" placeholder="Username" required>
+            <input name="password" type="password" placeholder="Heslo" required><br>
             <button class="login_button" value="submit" type="submit">Prihlásiť</button>
         </section>
     </form>
